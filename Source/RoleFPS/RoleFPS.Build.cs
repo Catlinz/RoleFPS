@@ -6,11 +6,21 @@ public class RoleFPS : ModuleRules
 {
 	public RoleFPS(ReadOnlyTargetRules Target) : base(Target)
 	{
-		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+        PrivatePCHHeaderFile = "Public/RoleFPS.h";
 
-		PrivateDependencyModuleNames.AddRange(new string[] {  });
+
+        PublicDependencyModuleNames.AddRange(
+            new string[] {
+                "Core",
+                "CoreUObject",
+                "Engine",
+                "InputCore"
+            }
+        );
+
+		PrivateDependencyModuleNames.AddRange(
+            new string[] { }
+        );
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
